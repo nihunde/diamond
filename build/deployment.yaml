@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: baff-buero-service
+spec:
+  selector:
+    app: baff-buero
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-baff-buero
+  labels:
+    app: baff-buero
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: baff-buero
+  template:
+    metadata:
+      labels:
+        app: baff-buero
+    spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
+      containers:
+      - name: baff-buero
+        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        ports:
+        - containerPort: 80
