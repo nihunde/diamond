@@ -28,7 +28,7 @@
   window.addEventListener("load", function() {
   var colors = ['#FFE419','#E85417', '#C627FF','#1794E8','#03FF09'];
   var  getRandomInt = function getRandomInt(max) {
-	max = Math.floor(max)+1;
+	max = Math.floor(max);
 	return Math.floor(Math.random() * max);
   };
   var color = colors[getRandomInt(colors.length)];
