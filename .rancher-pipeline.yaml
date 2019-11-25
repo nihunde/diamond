@@ -5,7 +5,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: example-baff-buero:${CICD_EXECUTION_SEQUENCE}
+      tag: diamond-baff-buero:${CICD_EXECUTION_SEQUENCE}
 - name: Deploy
   steps:
   - applyYamlConfig:

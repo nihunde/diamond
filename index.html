@@ -14,30 +14,24 @@
       <div class="container">
   <div class="row">
     <div class="col">
-     <h1>B&uuml;ro f&uuml;r angewandte Folienforschung</h1>
+     <h1></h1>
     </div>
     <div class="col-md-auto">
-	<object id="svg-baff-logo" data="img/baff-drawing.svg" type="image/svg+xml"></object>
+	<object id="svg-baff-logo" data="img/diamond.svg" type="image/svg+xml"></object>
     </div>
     <div class="col">
-      <p><em>Wir sind eine multidisziplin&auml;re Gruppe von kreativen K&ouml;pfen, die sich zwischen analog und digital bewegt. Beim Experimentieren mit verschiedensten Materialien und Techniken entwickeln wir, neben freien Projekten funktionale Anwendungen</em></p>
+      <p><em></em></p>
     </div>
   </div>
 </div>
 <script type="text/javascript">
   window.addEventListener("load", function() {
-  var colors = ['#FFE419','#E85417', '#C627FF','#1794E8','#03FF09'];
-  var  getRandomInt = function getRandomInt(max) {
-	max = Math.floor(max);
-	return Math.floor(Math.random() * max);
-  };
-  var color = colors[getRandomInt(colors.length)];
-  $('body').css('color',color);
+
     var svgObject = document.getElementById('svg-baff-logo').contentDocument;
-    var svg = svgObject.getElementById('svg2');
-     for(let item of svg.getElementsByClassName('path')) {
-    item.setAttributeNS(null, 'style', 'fill:'+color+';fill-opacity:1;fill-rule:evenodd;stroke:none');
-  }});
+    window.setInterval(function(){
+        svgObject.getElementById('tspan820').textContent= ' '+ svgObject.getElementById('tspan820').textContent;
+    },200);
+  });
 </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
